@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 
 export const PublicNavbar = () => (
-  <nav>
-    <section>
-      <Link to="/">Home</Link>
-      <Link to="/questions">Questions</Link>
-    </section>
-  </nav>
+  <Fragment>
+    <nav>
+      <section>
+        <Link to="/">Home</Link>
+        <Link to="/questions">Questions</Link>
+      </section>
+    </nav>
+    <div class="logo-img">
+      <img src="/logo.png" alt="logo" />
+    </div>
+  </Fragment>
 )
 
 export const PrivateNavbar = () => (
+  <Fragment>
   <nav>
     <section>
       <Link to="/">Home</Link>
@@ -19,4 +25,8 @@ export const PrivateNavbar = () => (
       <Link to="/list">List</Link>
     </section>
   </nav>
+  <div class="logo-img">
+        <img src="/logo.png" alt="logo" />
+      </div>
+  </Fragment>
 )
