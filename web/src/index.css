@@ -66,10 +66,13 @@ body {
     background-color: #f8f8f8;
     resize: none;
   }
+  footer{
+    margin-top: 150px;
+  }
   .logo-img img{
     float: right;
-    margin-right: 300px;
-    margin-top: -80px;
+    margin-right: 150px;
+    margin-top: -95px;
     width: 20%; 
 
   }
