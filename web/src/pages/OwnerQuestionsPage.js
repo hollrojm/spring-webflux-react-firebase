@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import { fetchOwnerQuestions, deleteQuestion } from '../actions/questionActions'
 import { Question } from '../components/Question'
+import Swal from 'sweetalert2'
 
 const OwnerQuestionsPage = ({ dispatch, loading, questions, hasErrors, redirect, userId }) => {
     useEffect(() => {
@@ -16,10 +17,23 @@ const OwnerQuestionsPage = ({ dispatch, loading, questions, hasErrors, redirect,
     }, [redirect, dispatch, userId]);
 
     const onDelete = (id) => {
-        dispatch(deleteQuestion(id))
+        Swal.fire({
+            title: 'Esta seguro que queire eliminar esta pregunta?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, Eliminala por favor!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                dispatch(deleteQuestion(id))
+              Swal.fire(
+                'Pregunta Eliminada!',
+                'Correstamente'
+              )
+            }
+          })
     }
-
-
     const renderQuestions = () => {
         if (loading) return <p>Loading questions...</p>
         if (hasErrors) return <p>Unable to display questions.</p>
