@@ -18,7 +18,7 @@ const OwnerQuestionsPage = ({ dispatch, loading, questions, hasErrors, redirect,
 
     const onDelete = (id) => {
         Swal.fire({
-            title: 'Esta seguro que queire eliminar esta pregunta?',
+            title: 'Esta seguro que quiere eliminar esta pregunta?',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -29,7 +29,7 @@ const OwnerQuestionsPage = ({ dispatch, loading, questions, hasErrors, redirect,
                 dispatch(deleteQuestion(id))
               Swal.fire(
                 'Pregunta Eliminada!',
-                'Correstamente'
+                'Correctamente'
               )
             }
           })
