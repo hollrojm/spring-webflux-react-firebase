@@ -1,5 +1,8 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
+import Register from './Register'
+
+
 
 const HomePage = ({children}) => (
   <Fragment>
@@ -12,8 +15,9 @@ const HomePage = ({children}) => (
     <Link to="/questions" className="button">
       View Questions
     </Link>
+    <Register></Register>
   </section>
-  
+
   </Fragment>
 )
 export default HomePage

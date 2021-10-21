@@ -19,6 +19,7 @@ import AnswerFormPage from './pages/AnswerFormPage'
 import OwnerQuestionsPage from './pages/OwnerQuestionsPage'
 import { useAuthState } from "react-firebase-hooks/auth";
 import Footer from './components/Footer'
+import Login from './pages/Login'
 
 firebase.initializeApp({
   apiKey: "AIzaSyCoA3aGrEe3WREmbMq24KAuNPxe5IBGARE",
@@ -42,9 +43,9 @@ const App = ({ dispatch }) => {
         <>
           <PrivateNavbar />
           <Switch>
-            <Route exact path="/" component={() => {
+            {/* <Route exact path="/" component={() => {
               return <HomePage><SignOut dispatch={dispatch} /></HomePage>
-            }} />
+            }} /> */}
             <Route exact path="/questions" component={QuestionsPage} />
             <Route exact path="/question/:id" component={SingleQuestionPage} />
             <Route exact path="/list" component={OwnerQuestionsPage} />
@@ -62,6 +63,14 @@ const App = ({ dispatch }) => {
             <Route exact path="/questions" component={QuestionsPage} />
             <Route exact path="/question/:id" component={SingleQuestionPage} />
             <Route exact path="/answer/:id" component={AnswerFormPage} />
+            <Route exact path="/login" component={()=>{
+              return(
+                <Login>
+                  <SignIn dispatch={dispatch} />
+                </Login>
+              )
+            }}
+            />
             <Redirect to="/" />
           </Switch>
         </>
@@ -77,7 +86,7 @@ function SignIn() {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
   };
-  return <button className="button right" onClick={signInWithGoogle}>Sign in with google</button>;
+  return <p></p>;
 }
 
 function SignOut({ dispatch }) {
@@ -97,4 +106,5 @@ function SignOut({ dispatch }) {
 }
 
 
-export default App
+export default App 
+export {auth}
