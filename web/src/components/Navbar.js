@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import { auth } from '../App';
 
 
-
-
 function SignOut({ dispatch }) {
   return (
     auth.currentUser && (

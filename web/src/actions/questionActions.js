@@ -69,7 +69,7 @@ export function postQuestion(question) {
                 }
             )
             const id = await response.text()
-            dispatch(success({redirect: `/question/${id}`}));
+            dispatch(success({ redirect: `/question/${id}` }));
         } catch (error) {
             dispatch(failure())
         }
@@ -89,7 +89,7 @@ export function deleteQuestion(id) {
                     }
                 }
             )
-            dispatch(success({redirect: `/list`}));
+            dispatch(success({ redirect: `/list` }));
         } catch (error) {
             dispatch(failure())
         }
@@ -108,7 +108,7 @@ export function deleteAnswer(id) {
                     }
                 }
             )
-            dispatch(success({redirect: `/question/${id}`}));
+            dispatch(success({ redirect: `/question/${id}` }));
         } catch (error) {
             dispatch(failure())
         }
@@ -129,10 +129,29 @@ export function postAnswer(answer) {
                     body: JSON.stringify(answer)
                 }
             )
-            dispatch(success({redirect: `/question/${answer.questionId}`}));
+            dispatch(success({ redirect: `/question/${answer.questionId}` }));
         } catch (error) {
             dispatch(failure())
         }
     }
-}
 
+}
+export function postReview(score, id, user) {
+    return async (dispatch) => {
+        dispatch(loading());
+        try {
+            const response = await fetch(`${URL_BASE}/addreview`, {
+                method: "PUT",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ userId: user, score: score, questionId: id }),
+            });
+            const data = await response.json();
+            dispatch(success({ redirect: `/question/${id}`, question: data }));
+        } catch (error) {
+            dispatch(failure());
+        }
+    };
+}

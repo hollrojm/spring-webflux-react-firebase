@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-
+import QuestionReviewForm from "../components/QuestionReviewForm";
 import { fetchQuestion, deleteAnswer } from '../actions/questionActions'
 
 import { Question } from '../components/Question'
@@ -46,7 +46,10 @@ const SingleQuestionPage = ({
     if (loading.question) return <p>Loading question...</p>
     if (hasErrors.question) return <p>Unable to display question.</p>
 
-    return <Question question={question} />
+    return <div>
+    <Question question={question} />
+    <QuestionReviewForm question={question} />
+  </div>
   }
 
   const renderAnswers = () => {

@@ -13,6 +13,7 @@ body {
     display: flex;
     padding: 2rem 0;
     background: #111;
+    text-align: center;
   }
   
   nav section {
@@ -23,6 +24,7 @@ body {
     font-weight: 700;
     padding: 1rem 1.5rem;
     border-radius: 4px;
+    
   }
   
   nav a:first-of-type {
@@ -67,13 +69,18 @@ body {
     resize: none;
   }
   footer{
-    margin-top: 150px;
+    
+    bottom: 0; 
   }
   .logo-img img{
+    
+    max-height:100%;
+    min-height:20%;
+    max-width: 18%;
+    margin-right: 225px;
     float: right;
-    margin-right: 150px;
     margin-top: -95px;
-    width: 20%; 
+
 
   }
   .question h2 {
