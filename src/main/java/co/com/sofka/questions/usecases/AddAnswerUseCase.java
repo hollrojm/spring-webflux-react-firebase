@@ -40,7 +40,7 @@ public class AddAnswerUseCase implements SaveAnswer {
 
     public Mono<String> enviarEMail(String to, String subject, String body) {
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-        simpleMailMessage.setFrom("questionsystem1999@gmail.com");
+        simpleMailMessage.setFrom("pruebashollman@gmail.com");
         simpleMailMessage.setTo(to);
         simpleMailMessage.setSubject(subject);
         simpleMailMessage.setText(body);
