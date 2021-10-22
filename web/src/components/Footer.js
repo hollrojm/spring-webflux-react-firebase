@@ -4,7 +4,7 @@ function Footer() {
     return (
         <Fragment >
             
-            <footer class="text-center  text-lg-start bg-black text-muted">
+            <footer class="text-center  footer mt-auto py-3 text-lg-start bg-black text-muted">
 
                 <section
                     class="d-flex justify-content-center justify-content p-4 border-bottom">

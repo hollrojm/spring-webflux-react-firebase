@@ -10,10 +10,11 @@ body {
   }
   
   nav {
-    display: flex;
+    height: 70px;
+    /* display: flex;
     padding: 2rem 0;
     background: #111;
-    text-align: center;
+    text-align: center; */
   }
   
   nav section {
@@ -31,9 +32,9 @@ body {
     margin-left: -1.5rem;
   }
   
-  nav a:hover {
+  /* nav a:hover {
     background: #222;
-  }
+  } */
   
   a {
     color: #ea3546;
@@ -73,13 +74,13 @@ body {
     bottom: 0; 
   }
   .logo-img img{
-    
+    position: relative;
     max-height:100%;
     min-height:20%;
     max-width: 18%;
     margin-right: 225px;
     float: right;
-    margin-top: -95px;
+    margin-top: -130px;
 
 
   }
@@ -110,7 +111,7 @@ body {
   
   .button {
     position: inherit;
-    background: #ea3546;
+    
     color: white;
     border-radius: 4px;
     font-weight: 700;
@@ -119,6 +120,9 @@ body {
 
   .right {
     float: right;
+  }
+  .margin-left{
+    margin-left: 30vh;
   }
 
   

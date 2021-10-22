@@ -7,7 +7,7 @@ function SignOut({ dispatch }) {
   return (
     auth.currentUser && (
       <button
-        className="button right"
+        className=" margin-left btn btn-outline-danger  my-2 my-sm-0"
         onClick={() => {
           // dispatch(logout())
           auth.signOut();
@@ -21,7 +21,7 @@ function SignOut({ dispatch }) {
 
 export const PublicNavbar = () => (
   <Fragment>
-    <nav>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
       <section>
         <Link to="/">Home</Link>
         <Link to="/questions">Questions</Link>
@@ -37,8 +37,8 @@ export const PublicNavbar = () => (
 
 export const PrivateNavbar = ({dispatch}) => (
   <Fragment>
-  <nav>
-    <section>
+  <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <section >
       <Link to="/">Home</Link>
       <Link to="/questions">Questions</Link>
       <Link to="/new">New</Link>
