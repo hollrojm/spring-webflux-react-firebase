@@ -142,5 +142,12 @@ body {
    height: 60vh;
  }
 
+.display-none{
+  display: none;
+}
+.float-left{
+  float: left;
+}
+
 
   

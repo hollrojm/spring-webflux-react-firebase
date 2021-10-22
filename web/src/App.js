@@ -8,7 +8,7 @@ import {
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
-import { login, logout } from './actions/authActions';
+import { login} from './actions/authActions';
 
 import { PublicNavbar, PrivateNavbar } from './components/Navbar'
 import HomePage from './pages/HomePage'
@@ -81,28 +81,11 @@ const App = ({ dispatch }) => {
 
 
 function SignIn() {
-  const signInWithGoogle = () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider);
-  };
+  
   return <p></p>;
 }
 
-function SignOut({ dispatch }) {
-  return (
-    auth.currentUser && (
-      <button
-        className="button right"
-        onClick={() => {
-          dispatch(logout())
-          auth.signOut();
-        }}
-      >
-        Sign out
-      </button>
-    )
-  );
-}
+
 
 
 export default App 

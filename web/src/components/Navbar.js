@@ -21,7 +21,7 @@ function SignOut({ dispatch }) {
 
 export const PublicNavbar = () => (
   <Fragment>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-5">
       <section>
         <Link to="/">Home</Link>
         <Link to="/questions">Questions</Link>
@@ -29,7 +29,7 @@ export const PublicNavbar = () => (
       </section>
       
     </nav>
-    <div class="logo-img">
+    <div className="logo-img">
       <img src="/logo.png" alt="logo" />
     </div>
   </Fragment>
@@ -46,7 +46,7 @@ export const PrivateNavbar = ({dispatch}) => (
       <SignOut dispatch={dispatch} />
     </section>
   </nav>
-  <div class="logo-img">
+  <div className="logo-img">
         <img src="/logo.png" alt="logo" />
       </div>
       
