@@ -17,10 +17,10 @@ export const Question = ({ question, excerpt, onDelete, setCategorySearch }) => 
             <p>{question.category}  - <small>{question.type}</small></p>}
           
             {onDelete && (
-              <button className="button right" onClick={() => onDelete(question.id)}>DELETE</button>
+              <button className="btn-delete btn-danger" onClick={() => onDelete(question.id)}><i className="fa fa-trash" aria-hidden="true"></i></button>
             )}
             {excerpt && (
-              <Link to={`/question/${question.id}`} className="button">
+              <Link to={`/question/${question.id}`} className=" text-center btn-view btn-info">
                 View Question
               </Link>
             )}

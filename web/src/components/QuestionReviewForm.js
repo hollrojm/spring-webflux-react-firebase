@@ -27,16 +27,21 @@ function QuestionReviewForm({ question, user, dispatch, loading, hasErrors }) {
         </div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)}>
-          <label for="review">Question rating</label>
-          <select {...register("review")} id="">
+          <div className="row">
+          <div className="col-5">
+          <label htmlFor="review">Question rating</label>
+          <select className=" form-control text-center"{...register("review")} id="">
             <option value=""> Select...</option>
             <option value="1">{`\u{1f641}`}</option>
             <option value="2"> {`\u{1f610}`}</option>
             <option value="3"> {`\u{1f600}`}</option>
           </select>
-          <button type="submit" className=" button right">
+          </div>
+          <button type="submit" className=" btn-send-rating btn-success right">
             Send review
           </button>
+          </div>
+          
         </form>
       )}
     </section>

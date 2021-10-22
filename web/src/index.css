@@ -138,6 +138,9 @@ body {
  .margin-top{
    margin-top: 15vh;
  }
+ .margin-right{
+  margin-right: 5px;
+}
  .heiht{
    height: 60vh;
  }
@@ -147,6 +150,46 @@ body {
 }
 .float-left{
   float: left;
+}
+.btn-send{
+  float:right;
+  width: 15%;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  color: white;
+  margin-top: 10px;
+}
+
+.btn-delete{
+  float:right;
+  width: 15%;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  color: white;
+  margin-top: 10px;
+}
+.btn-send-rating{
+  float:right;
+  width: 20%;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  margin-top: 35px;
+}
+.i-trash{
+  color: #f1142a;
+}
+
+.btn-view{  
+  float:right;
+  width: 20%;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  color: white;
+  margin-top: 10px;
 }
 
 
