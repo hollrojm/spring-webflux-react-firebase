@@ -54,7 +54,7 @@ function Register(props) {
                     </form>
                     <p className="text-center">ó</p>
                     <div>
-                        <button className="btn-google right" onClick={signInWithGoogle}>Sign in with google  <i className="fab fa-google"></i></button>;
+                        <button className="btn-google right" onClick={signInWithGoogle}>Sign in with google  <i className="fab fa-google"></i></button>
                     </div>
                 </div>
             </div>

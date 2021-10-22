@@ -39,7 +39,7 @@ function Login(props) {
             <div class="col-lg-6">
                 <div class="card2 card border-0 px-4 py-5">
                     
-                        <button className="btn-google right" onClick={signInWithGoogle}>Sign in with google  <i class="fab fa-google"></i></button>;
+                        <button className="btn-google right" onClick={signInWithGoogle}>Sign in with google  <i class="fab fa-google"></i></button>
                     
                         <div class="line"></div> <small class="or text-center">Or</small>
                         <br></br>
