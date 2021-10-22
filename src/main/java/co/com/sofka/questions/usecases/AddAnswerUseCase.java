@@ -32,7 +32,7 @@ public class AddAnswerUseCase implements SaveAnswer {
                 answerRepository.save(mapperUtils.mapperToAnswer().apply(answerDTO))
                         .map(answer -> {
                             question.getAnswers().add(answerDTO);
-                            var res= enviarEMail(question.getUserMail(), "¡Enhorabuena te han respondido!","alguien respondió tu pregunta "+question.getQuestion());
+                            //var res= enviarEMail(question.getUserMail(), "¡Enhorabuena te han respondido!","alguien respondió tu pregunta "+question.getQuestion());
                             return question;
                         })
         );
