@@ -21,6 +21,7 @@ public class QuestionDTO {
     private Integer numberOfReviews = 0;
     private Integer sumOfReviewScores = 0;
     private List<String> userReviews = new ArrayList<>();
+    private String userMail;
 
 
 
@@ -38,7 +39,7 @@ public class QuestionDTO {
 
     }
 
-    public QuestionDTO(String id, String userId, String question, String type, String category, Integer numberOfReviews, Integer sumOfReviewScores, List<String> userReviews) {
+    public QuestionDTO(String id, String userId, String question, String type, String category, Integer numberOfReviews, Integer sumOfReviewScores, List<String> userReviews,String userMail) {
         this.id = id;
         this.userId = userId;
         this.question = question;
@@ -47,6 +48,7 @@ public class QuestionDTO {
         this.numberOfReviews = numberOfReviews;
         this.sumOfReviewScores = sumOfReviewScores;
         this.userReviews = userReviews;
+        this.userMail = userMail;
     }
 
     public List<AnswerDTO> getAnswers() {
@@ -120,6 +122,14 @@ public class QuestionDTO {
 
     public void setUserReviews(List<String> userReviews) {
         this.userReviews = userReviews;
+    }
+
+    public String getUserMail() {
+        return userMail;
+    }
+
+    public void setUserMail(String userMail) {
+        this.userMail = userMail;
     }
 
     @Override

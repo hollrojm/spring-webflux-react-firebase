@@ -18,6 +18,7 @@ public class Question {
     private Integer numberOfReviews = 0;
     private Integer sumOfReviewScores = 0;
     private List<String> userReviews = new ArrayList<>();
+    private String userMail;
 
 
 
@@ -84,5 +85,13 @@ public class Question {
 
     public void setUserReviews(List<String> userReviews) {
         this.userReviews = userReviews;
+    }
+
+    public String getUserMail() {
+        return userMail;
+    }
+
+    public void setUserMail(String userMail) {
+        this.userMail = userMail;
     }
 }
