@@ -12,7 +12,7 @@ const HomePage = ({children}) => (
       {children}
     </div>
     <p>welcome to the question and answer app.</p>
-    <Link to="/questions" className="button">
+    <Link to="/questions" className="btn btn-danger">
       View Questions
     </Link>
     <Register></Register>
