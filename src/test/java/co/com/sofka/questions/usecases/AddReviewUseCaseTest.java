@@ -16,7 +16,6 @@ import org.springframework.boot.test.mock.mockito.SpyBean;
 import reactor.core.publisher.Mono;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @SpringBootTest
@@ -34,35 +33,35 @@ class AddReviewUseCaseTest {
     @DisplayName("Add satisfaction review")
     void setAddReviewTest(){
         List<String> listParameter = new ArrayList<>();
-        var questionDTO = new QuestionDTO("hhhhh","hhhhh1111","Que lenguaje de programacion te gusta?","Desarrollo",
-                "TECNOLOGIA Y DESARROLLO",1,2, Arrays.asList("x1","x2"),  "hollman@gmail.com ");
+        var questionDTO = new QuestionDTO("1234drt", "1234", "Que es un Dns",
+                "OPEN (LONG OPEN BOX)", "SOFTWARE DEVELOPMENT", 1, 1, listParameter, "hollman@gmail.com");
 
-        var question = new Question();
-        question.setId("hhhhh");
-        question.setUserId("hhhhh1111");
-        question.setQuestion("Que lenguaje de programacion te gusta?");
-        question.setType("Desarrollo");
-        question.setCategory("TECNOLOGIA Y DESARROLLO");
-        question.setNumberOfReviews(1);
-        question.setSumOfReviewScores(2);
-        question.setUserReviews(List.of("x1","x2"));
-        question.setUserMail("santiago@gmail.com");
+        var resource = new Question();
+        resource.setId("1234drt");
+        resource.setUserId("1234");
+        resource.setQuestion("Que es un Dns");
+        resource.setType("OPEN (LONG OPEN BOX)");
+        resource.setCategory("SOFTWARE DEVELOPMENT");
+        resource.setNumberOfReviews(1);
+        resource.setSumOfReviewScores(1);
+        resource.setUserReviews(listParameter);
+        resource.setUserMail("hollman@gmail.com");
 
-        Mockito.when(questionRepository.findById(Mockito.any(String.class))).thenReturn(Mono.just(question));
+        Mockito.when(questionRepository.findById(Mockito.any(String.class))).thenReturn(Mono.just(resource));
         Mockito.when(updateQuestionUseCase.apply(questionDTO)).thenReturn(Mono.just(questionDTO));
-        Mockito.when(questionRepository.save(Mockito.any(Question.class))).thenReturn(Mono.just(question));
+        Mockito.when(questionRepository.save(Mockito.any(Question.class))).thenReturn(Mono.just(resource));
 
         var review = new Review();
-        review.setUserId("hhhhh1111");
+        review.setUserId("1234");
         review.setScore("3");
         review.setQuestionId("1234drt");
 
         var resultQuestionDTO = addReviewUseCase.addReview(review);
         System.out.println(resultQuestionDTO);
         assert resultQuestionDTO != null;
-        Assertions.assertEquals(resultQuestionDTO.block().getId(), question.getId());
-        Assertions.assertEquals(resultQuestionDTO.block().getCategory(), question.getCategory());
-        Assertions.assertEquals(resultQuestionDTO.block().getQuestion(), question.getQuestion());
+        Assertions.assertEquals(resultQuestionDTO.block().getId(), resource.getId());
+        Assertions.assertEquals(resultQuestionDTO.block().getCategory(), resource.getCategory());
+        Assertions.assertEquals(resultQuestionDTO.block().getQuestion(), resource.getQuestion());
 
 
     }
