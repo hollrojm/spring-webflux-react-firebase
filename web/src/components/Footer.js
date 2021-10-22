@@ -4,12 +4,12 @@ function Footer() {
     return (
         <Fragment >
             
-            <footer class="text-center  footer mt-auto py-3 text-lg-start bg-black text-muted">
+            <footer class="text-center  footer margin-top  text-lg-start bg-black text-muted">
 
                 <section
                     class="d-flex justify-content-center justify-content p-4 border-bottom">
                     <div class="me-5 d-none d-lg-block">
-                        <span>Siguenos en nuestras redes sociales:</span>
+                        {/* <span>Siguenos en nuestras redes sociales:</span> */}
                     </div>
                     <div>
                         <a href="" class="me-4 text-reset">
@@ -31,10 +31,13 @@ function Footer() {
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
-
+                    
                 </section>
+                <div className="text-center"><p>Sitio de preguntas y respuestas para todo publico,
+                                profesionales y aficionados de cualquier tema en general.
+                                </p></div>
 
-                <section class="">
+                {/* <section class="">
                     <div class="container text-center text-md-start mt-8">
 
                         <div class="row mt-3">
@@ -66,7 +69,7 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 <div class="text-center ">
                     © 2021 Copyright:
                     <a class="text-reset fw-bold" href="https://hollman-cv-portafolio.netlify.app/">  Hollman Rojas</a>

@@ -5,9 +5,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
   
-  p {
+  /* p {
     font-size: 1.1rem;
-  }
+  } */
   
   nav {
     height: 70px;
@@ -70,7 +70,7 @@ body {
     resize: none;
   }
   footer{
-    margin-top: 10%;
+    margin-top: 50px;
     bottom: 0; 
   }
   .logo-img img{
@@ -111,7 +111,6 @@ body {
   
   .button {
     position: inherit;
-    
     color: white;
     border-radius: 4px;
     font-weight: 700;
@@ -122,7 +121,26 @@ body {
     float: right;
   }
   .margin-left{
-    margin-left: 30vh;
+    margin-left: 20vh;
   }
+  /* btn google */
+
+ .btn-google{
+  background: #f95342;
+  width: 100%;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  color: white;
+  margin-bottom: 18px;
+ }
+
+ .margin-top{
+   margin-top: 15vh;
+ }
+ .heiht{
+   height: 60vh;
+ }
+
 
   

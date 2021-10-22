@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { connect } from 'react-redux'
 
 import { fetchOwnerQuestions, deleteQuestion } from '../actions/questionActions'
@@ -45,10 +45,14 @@ const OwnerQuestionsPage = ({ dispatch, loading, questions, hasErrors, redirect,
     }
 
     return (
-        <section>
-            <h1>Questions</h1>
+        <Fragment>
+            <div className="heiht">
+        <section className="">
+            <h1>My Questions</h1>
             {renderQuestions()}
         </section>
+        </div>
+        </Fragment>
     )
 }
 
